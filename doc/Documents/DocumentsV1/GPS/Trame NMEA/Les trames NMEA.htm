@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://www.icefaab.fr/rando/gps/nmea.php -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML 
+lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<META content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<META name="author" content="Icefaab">
+<META name="Copyright" content="Icefaab">
+<META name="robots" content="index, follow">
+<META name="revisit-after" content="15 days"><LINK rel="SHORTCUT ICON" href="/style/img/favicon.png">
+<LINK rel="stylesheet" type="text/css" href="Les%20trames%20NMEA_fichiers/style.css"><!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="/style/ie.css" media="screen" />
+<![endif]-->
+<TITLE>Les trames NMEA</TITLE>
+<META name="Description" content="Les trames NMEA">
+<META name="GENERATOR" content="MSHTML 9.00.8112.16457"></HEAD>
+<BODY>
+<DIV id="global">
+<DIV id="bandeau"></DIV>
+<DIV id="centre">
+<DIV id="colonne">
+<H1>Navigation</H1>
+<UL id="menu">
+  <LI><A href="http://www.icefaab.fr/index.php">Accueil</A></LI>
+  <LI><A href="http://www.icefaab.fr/pc/pc.php">Informatique</A></LI>
+  <LI><A href="http://www.icefaab.fr/photo/photo.php">Photo</A></LI>
+  <LI><A href="http://www.icefaab.fr/rando/rando.php">Rando</A>
+  <UL id="sousmenu">
+    <LI><A href="http://www.icefaab.fr/rando/gps.php">Le GPS</A></LI>
+    <LI><A href="http://www.icefaab.fr/rando/carto.php">Cartographie</A></LI>
+    <LI><A href="http://www.icefaab.fr/rando/vttlight.php">Eclairage 
+VTT</A></LI>
+    <LI><A href="http://www.icefaab.fr/rando/monvtt.php">Mon VTT</A></LI>
+    <LI><A href="http://www.icefaab.fr/rando/liens.php">Liens</A></LI></UL></LI>
+  <LI><A 
+  href="http://www.icefaab.fr/skichallenge/index.php">SkiChallenge</A></LI>
+  <LI><A href="http://www.icefaab.fr/apropos/apropos.php">A propos du 
+  site</A></LI></UL><BR>
+<FORM id="cse-search-box" action="http://www.icefaab.fr/search.php">
+<DIV><INPUT name="cx" value="018053633296725634940:gz1tf5vdwoo" 
+type="hidden"><INPUT name="cof" value="FORID:10" type="hidden"><INPUT name="ie" 
+value="ISO-8859-1" type="hidden"><INPUT name="q" size="20" type="text"><INPUT name="sa" value="Rechercher" type="submit"></DIV></FORM>
+<SCRIPT type="text/javascript" src="Les%20trames%20NMEA_fichiers/brand.js"></SCRIPT>
+<BR><IMG alt="logo_rando.png" 
+src="Les%20trames%20NMEA_fichiers/logo_rando.png"></DIV>
+<DIV id="contenu">
+<H1>Les trames NMEA</H1>
+<P>NMEA pour National Marine Electronics Association est une association de 
+professionnels des équipements marins dont le but est de définir des standards 
+dans ce domaine.</P><IMG class="centrer" alt="nmea.jpg" src="Les%20trames%20NMEA_fichiers/nmea.jpg">
+<P>Le standard qui nous intéresse pour le GPS est le NMEA-0183. Celui-ci défini 
+une interface électrique matérielle et un protocole de communication entre un 
+récepteur et un équipement capable d'interpréter les données. En effet, à part 
+certains modèles de GPS, ce standard s'est étendu à tous les usages, et la 
+plupart des logiciels tournant sur PC par exemple sont capables d'exploiter des 
+données à la norme NMEA.</P><BR>
+<H2>L'interface électrique</H2>
+<P>Très connue dans le domaine de la transmission de données, c'est l'interface 
+série RS232 qui est la plus utilisée par les équipements compatibles NMEA. 
+L'interface différentielle RS422 est aussi retenue par la norme. Comme 
+d'habitude, la RS232 est composée de 3 fils : Tx (émission), Rx (réception) et 
+GND (référence). Très répandue, cette interface permet donc de relier un 
+récepteur GPS à un ordinateur classique.</P><BR>
+<H2>Le protocole de communication</H2>
+<P>Les données sont transmises à la vitesse de 4800 bauds au format ASCII, sous 
+forme de blocs de phrases (ou trames), chaque seconde d'horloge interne du 
+GPS.</P>
+<P>Chaque trame commence par le caractère "$" suivi d'un code de 2 lettres pour 
+identifier l'émetteur de la trame. Dans le cas du GPS qui nous intéresse, ce 
+code est "GP".</P>
+<P>Les trames définies par le standard sont nombreuses et chaque fabricant 
+implémente celles qu'il souhaite dans ses modèles, et suivant les usages auquels 
+ils sont destinés. Une trame est identifiée par 3 lettres dont les principales 
+rencontrées dans les GPS de rando sont les suivantes :</P>
+<UL>
+  <LI>GGA : GPS fix et date,</LI>
+  <LI>GLL : position géographique longitude-latitude,</LI>
+  <LI>GSA : satellites actifs,</LI>
+  <LI>GSV : satellites visibles,</LI>
+  <LI>RMB : données minimales de navigation,</LI>
+  <LI>RMC : données minimales exploitables spécifiques,</LI>
+  <LI>VTG : direction et vitesse de déplacement.</LI></UL>
+<P>Les champs suivants contiennent les données spécifiques à la trame en 
+question et sont séparés par des virgules, dans la limite de 82 caractères par 
+trame. Un checksum optionnel peut être ajouté à la fin de la trame, il est 
+précédé du caractère "*". Chaque ligne se termine par [CR][LF] (retour chariot, 
+retour à la ligne).</P>
+<P>Il est très facile de récupérer les trames NMEA provenant d'un GPS. Un 
+HyperTerminal configuré de la façon suivante suffit amplement.</P><IMG class="centrer" 
+alt="com_nmea.jpg" src="Les%20trames%20NMEA_fichiers/com_nmea.jpg"><BR>
+<H2>Exemple de trames émises par un Garmin eTrex Venture :</H2><IMG class="centrer" 
+alt="trames.jpg" src="Les%20trames%20NMEA_fichiers/trames.jpg">
+<P>Pour le détail complet des trames faire une petite recherche sur Internet, 
+mais en résumé voici ce qu'on peut analyser :</P>
+<P>- GGA, RMC et GLL donnent le fix et l'heure de celui-ci :</P>
+<UL>
+  <LI>heure du fix 15h38mn00s (UTC),</LI>
+  <LI>latitude 47°05.3776' N,</LI>
+  <LI>longitude 2°25.2751' E,</LI>
+  <LI>GGA donne en plus l'altitude (105,1m),</LI>
+  <LI>RMC donne aussi la date (060907).</LI></UL>
+<P>- les 3 trames GSV donnent le nombre de satellites visibles (12) ainsi que 
+l'identification, l'elevation, l'azimuth et la force du signal pour chacun 
+d'entre eux,</P>
+<P>- les champs de la trame RMB sont vides car le GPS n'est pas en mode 
+navigation, mais sinon le cap et les coordonnées de la destination ainsi que la 
+vitesse seraient affichés,</P>
+<P>- les trames commençant par $PGRM sont un format propriétaire de 
+Garmin.</P><BR>
+<P>Certains GPS permettent d'émettre seulement les trames de son choix et 
+d'autres "balancent" toutes celles qu'ils connaissent. Il faut alors faire le 
+tri par logiciel.</P>
+<P>Les autres protocoles de communication existants sont propriétaires (Garmin, 
+Megellan...) et permettent d'autres usages spécifiques qui seront détaillés dans 
+la section <A 
+href="http://www.icefaab.fr/rando/carto.php">Cartographie</A>.</P></DIV></DIV>
+<DIV id="piedpage"><A title="WebAnalytics" href="http://www.xiti.com/xiti.asp?s=299955">
+<SCRIPT type="text/javascript">
+			<!--
+			Xt_param = 's=299955&p=GPS_NMEA';
+			try {Xt_r = top.document.referrer;}
+			catch(e) {Xt_r = document.referrer; }
+			Xt_h = new Date();
+			Xt_i = '<img width="39" height="25" border="0" alt="" ';
+			Xt_i += 'src="http://logv4.xiti.com/hit.xiti?'+Xt_param;
+			Xt_i += '&hl='+Xt_h.getHours()+'x'+Xt_h.getMinutes()+'x'+Xt_h.getSeconds();
+			if(parseFloat(navigator.appVersion)>=4)
+			{Xt_s=screen;Xt_i+='&r='+Xt_s.width+'x'+Xt_s.height+'x'+Xt_s.pixelDepth+'x'+Xt_s.colorDepth;}
+			document.write(Xt_i+'&ref='+Xt_r.replace(/[<>"]/g, '').replace(/&/g, '$')+'" title="Internet Audience">');
+			//-->
+		</SCRIPT>
+</A><NOSCRIPT>			&lt;p&gt;				Mesure d'audience ROI statistique webanalytics par 
+&lt;img width="39" height="25" 
+src="http://logv4.xiti.com/hit.xiti?s=299955&amp;p=GPS_NMEA" alt="WebAnalytics" 
+/&gt;			&lt;/p&gt;		</NOSCRIPT></DIV></DIV></BODY></HTML>
