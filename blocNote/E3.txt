@@ -1,25 +1,26 @@
-Mettre en oeuvre la détection d’un tag RFID pour activer le panneau d’affichage
-(durée : 30h) (E3)
-  Étudier le principe de la RFID ;
-  Établir le schéma structurel du module RFID et de l’afficheur LCD avec la carte arduino et réaliser le câblage ;
-  Écrire un code RFID dans un tag et lire un code RFID dans un tag ;
-  Établir l’algorithme et écrire la fonction logicielle pour détecter et afficher le numéro d’un tag RFID ;
-  Calculer et vérifier le checksum ;
-  Réaliser un mode opératoire pour valider le fonctionnement de la structure en affichant le numéro du tag RFID sur le moniteur série du logiciel IDE Arduino et sur un afficheur LCD. Vérifier que le panneau est activé en fonction du tag RFID ;
-Matériels :
-  Panneau d’affichage couleur à LED ;
+Mettre en oeuvre la dÃ©tection dâ€™un tag RFID pour activer le panneau dâ€™affichage
+(durÃ©e : 30h) (E3)
+  Ã‰tudier le principe de la RFID ;
+  Ã‰tablir le schÃ©ma structurel du module RFID et de lâ€™afficheur LCD avec la carte arduino et rÃ©aliser le cÃ¢blage ;
+  Ã‰crire un code RFID dans un tag et lire un code RFID dans un tag ;
+  Ã‰tablir lâ€™algorithme et Ã©crire la fonction logicielle pour dÃ©tecter et afficher le numÃ©ro dâ€™un tag RFID ;
+  Calculer et vÃ©rifier le checksum ;
+  RÃ©aliser un mode opÃ©ratoire pour valider le fonctionnement de la structure en affichant le numÃ©ro du tag RFID sur le moniteur       sÃ©rie du logiciel IDE Arduino et sur un afficheur LCD. 
+  VÃ©rifier que le panneau est activÃ© en fonction du tag RFID ;
+MatÃ©riels :
+  Panneau dâ€™affichage couleur Ã  LED ;
   Lecteur RFID et afficheur LCD 2 x 16 ;
   Carte de prototypage et carte arduino ;
-  PC équipé du logiciel IDE Arduino ;
+  PC Ã©quipÃ© du logiciel IDE Arduino ;
 
 
-Mettre en oeuvre le module serveur page WEB et élaborer la page WEB pour afficher les messages de la commune (durée : 25h) (E3)
-  Connecter le module Raspberry PI et le configurer (Serveur, Adresse IP,…) ;
-  A l’aide de la guidance fourni, apprendre à utiliser le module Raspberry PI ;
-  Créer une page Web en HTML pour gérer le panneau d’affichage ;
-  Tester l’affichage de la page Web ;
-  Établir l’algorithme et écrire la fonction logicielle pour délivrer sur la liaison série les données à afficher sur le panneau (scores). Transmettre les caractères avec un navigateur et analyser les caractères reçus sur le port COM1 du module Raspberry PI ;
-  Réaliser un mode opératoire pour valider le fonctionnement du module Raspberry PI lorsqu’un message est transmis à partir de la page WEB ;
-Matériels :
+Mettre en oeuvre le module serveur page WEB et Ã©laborer la page WEB pour afficher les messages de la commune (durÃ©e : 25h) (E3)
+  Connecter le module Raspberry PI et le configurer (Serveur, Adresse IP,â€¦) ;
+  A lâ€™aide de la guidance fourni, apprendre Ã  utiliser le module Raspberry PI ;
+  CrÃ©er une page Web en HTML pour gÃ©rer le panneau dâ€™affichage ;
+  Tester lâ€™affichage de la page Web ;
+  Ã‰tablir lâ€™algorithme et Ã©crire la fonction logicielle pour dÃ©livrer sur la liaison sÃ©rie les donnÃ©es Ã  afficher sur le panneau (scores). Transmettre les caractÃ¨res avec un navigateur et analyser les caractÃ¨res reÃ§us sur le port COM1 du module Raspberry PI ;
+  RÃ©aliser un mode opÃ©ratoire pour valider le fonctionnement du module Raspberry PI lorsquâ€™un message est transmis Ã  partir de la page WEB ;
+MatÃ©riels :
   Module Raspberry PI ;
-  PC équipé des logiciels hyperterminal, navigateur Firefox et de XCTU ;
+  PC Ã©quipÃ© des logiciels hyperterminal, navigateur Firefox et de XCTU ;
