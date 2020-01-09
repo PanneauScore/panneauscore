@@ -1,0 +1,33 @@
+Projet STI2D : Panneau LED
+
+Mes Tâches :
+
+Tache 4 : Mettre en oeuvre l’horloge en temps réel 
+(durée : 30h) (E2) 
+? Rechercher une solution permettant de gérer l’extinction du panneau en fonction des heures d’ouverture ; 
+? Choisir un module RTC et un relais ; 
+? Établir le schéma structurel du module RTC I2C et du relais avec la carte arduino et réaliser le câblage de l’ensemble ; 
+? Établir l’algorithme et écrire la fonction logicielle pour afficher l’heure du module RTC et éteindre le panneau en dehors des heures d’ouverture ; 
+? Réaliser un mode opératoire pour valider le fonctionnement de la structure en affichant l’heure sur le moniteur série du logiciel IDE arduino et sur un afficheur LCD. Vérifier la mise hors tension du panneau en dehors des heures d’ouverture ; 
+
+Matériels : 
+? Panneau d’affichage couleur à LED ; 
+? Module RTC I2C, relais et afficheur LCD 2 x 16 ; 
+? Carte de prototypage et carte arduino ; 
+? PC équipé du logiciel IDE Arduino ; 
+
+
+Tache 8 : Réaliser la mesure de la consommation électrique journalière du panneau 
+(durée : 25h) (E2) 
+? Rechercher une solution pour mesurer la puissance consommée par le panneau ; 
+? Choisir un capteur de technologie I2C pour mesurer le courant ; 
+? Établir le schéma structurel du module I2C avec la carte arduino et réaliser le câblage de l’ensemble ; 
+? Établir l’algorithme et écrire la fonction logicielle qui permet de calculer et d’afficher la consommation électrique du panneau d’affichage ; 
+? Donner la fonction de transfert du courant en fonction de la valeur numérique du CAN intégré dans le capteur ; 
+? Vérifier le fonctionnement en effectuant une simulation sous Proteus ; 
+? Réaliser un mode opératoire pour valider le fonctionnement de la structure en affichant la consommation électrique du panneau sur le moniteur série du logiciel IDE Arduino et sur un afficheur LCD ; 
+
+Matériels : 
+? Panneau d’affichage couleur à LED ; 
+? Capteur I2C pour mesure de courant et afficheur LCD 2 x 16 ; 
+? Carte de prototypage et carte arduino ; 
