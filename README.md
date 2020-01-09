@@ -21,4 +21,5 @@
 ### Cas d'utilisation Sysml :
 ![sysml](https://raw.githubusercontent.com/PanneauScore/panneauscore/master/sysml/Cas-d'utilistaion.PNG)
 
-
+### Diagramme de GANTT :
+![sysml](https://raw.githubusercontent.com/PanneauScore/panneauscore/master/src_diapo/GANTT.png)
