@@ -15,4 +15,7 @@ choix panneau 12V/24V:
 -le panneau 12V est plus simple d'utilisation et est compatible avec les cartes arduino
 choix panneau 12V
 
-Programmation arduino :
+Programmation arduino :		Arduino 1.6.9
+- Configurer affichage. [x]
+- Gerer les scores.	[]
+- Gerer les messages defilants.	[]
