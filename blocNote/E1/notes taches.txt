@@ -1,0 +1,18 @@
+NOTES TACHES
+
+
+TACHE 1
+
+choix arduino uno/mega
+-pb memoire tampon, memoire: uno < mega
+-pb nbr broche: uno < mega
+choix arduino mega
+
+choix panneau 12V/24V: 
+-conso 24x20 led
+	24V: 0.62A
+	12V: 0.60A
+-le panneau 12V est plus simple d'utilisation et est compatible avec les cartes arduino
+choix panneau 12V
+
+Programmation arduino :
